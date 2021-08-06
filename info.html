@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./normalization.css">
+    <script src="https://kit.fontawesome.com/4096c96da3.js" crossorigin="anonymous"></script>
     <script src="./info.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praneeth Kumar Reddy Punreddy</title>
 </head>
 <body>
     <header class="header">
-        <p>Web 222 Form SignUp</p>
+        <span>
+            <i class="fas fa-anchor"></i>
+            Dock Yard SignUp
+       </span>
     </header>
 <div id=grids_align> 
     <nav>
@@ -35,20 +39,20 @@
            <b>User Name: </b><input onchange="Username(this)" type="text" name="username" placeholder="Username" id="username" required autocomplete="address-level4" tabindex="5">
            <br><br>
            <label for="e_level"><b>Education Level: </b></label>
-           <select name="Education_Level" id="e_level" tabindex="6">
+           <select name="Education_Level" id="e_level" onchange=checkoption(this) tabindex="6">
                <option value="0"></option>
-               <option value="Technical Diploma" selected>Technical Diploma</option>
+               <option value="Technical Diploma">Technical Diploma</option>
                <option value="College Diploma">College Diploma</option>
                <option value="Bachelor's Degree">Bachelor's Degree</option>
                <option value="Master's Degree">Master's Degree</option>
-               <option value="Others">Others</option>
+               <option selected value= "Others">Others</option>
            </select>
            <br><br>
-           <fieldset  name="Education Status" tabindex="7">
+           <fieldset  name="Education Status" tabindex="7" onchange="checkRadio(this)">
                <legend> <b>Education Status </b> </legend>
-               <input type="radio" value="Graduated" checked name="Education Status">Graduated <br>
+               <input type="radio" value="Graduated" name="Education Status">Graduated <br>
                <input type="radio" value="Current enrolled" name="Education Status">Current enrolled <br>
-               <input type="radio" value="Did not graduate" name="Education Status">Did not graduate
+               <input type="radio" checked value="Did not graduate" name="Education Status">Did not graduate
            </fieldset>
            <br>
            <b>Email: </b><input placeholder="Email" required type="email" tabindex="8" name="email" id="email">
@@ -57,7 +61,7 @@
            <br><br>
            <input type="submit" tabindex="10" value="SignUp">
            <input type="reset" onclick="Clear(this)" tabindex="11" value=Clear>
-           <input type="hidden" name="lastName" id="lastName" value="Punreddy" />
+           <input type="hidden" name="lastName" id="lastName" value="Punreddy">
            <input type="hidden" name="studentId" id="studentId" value="130828205" />
         </form>
         
